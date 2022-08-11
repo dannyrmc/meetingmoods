@@ -2,9 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import PlayGrunt from '../components/PlayGrunt'
-import PlayGoat from '../components/PlayGoat'
-import GoatButton from '../components/PlayGoat'
+import GruntButton from '../components/GruntButton'
+import GoatButton from '../components/GoatButton'
 
 
 export default function Home() {
@@ -26,8 +25,8 @@ export default function Home() {
 
         <div className={styles.grid}>
 
-        <PlayGrunt/> 
-        <PlayGoat/>
+        <GruntButton/> 
+        <GoatButton/>
 
         </div>
 
