@@ -7,6 +7,7 @@ const GoatButton = () => {
   
   return <Button 
     button_action= {play}
+    icon_name= "volume_up" //fonts.google.com/icons?icon.style=Rounded 
     button_text= "Goat Scream"
   />
 };
