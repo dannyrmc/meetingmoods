@@ -11,6 +11,7 @@ const GoatButton = () => {
     // `interrupt` ensures that if the sound starts again before it's
     // ended, it will truncate it. Otherwise, the sound can overlap.
     // interrupt: true,
+    html5: true, 
     onend: () => {
       console.log('Sound ended!');
     },
