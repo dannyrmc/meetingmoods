@@ -138,6 +138,7 @@
   font-weight: 600;
   line-height: 110%;
   color: #ffffff;
+  user-select: none;
 }
 
 .button:hover {
