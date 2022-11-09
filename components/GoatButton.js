@@ -14,15 +14,9 @@ const GoatButton = () => {
     // interrupt: true,
     html5: true, 
     
-    onplay: () => {
-      console.log('Goat sound started!');
-    },
-
     onend: () => {
-      console.log('Goat sound ended!');
+      console.log('Sound ended!');
     },
-
-
   });
 
   const handleClick = () => {
