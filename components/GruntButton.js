@@ -13,8 +13,12 @@ const GruntButton = () => {
     // interrupt: true,
     html5: true, 
 
+    onplay: () => {
+      console.log('Grunt sound started!');
+    },
+
     onend: () => {
-      console.log('Sound ended!');
+      console.log('Grunt sound ended!');
     },
   });
 

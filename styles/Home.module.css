@@ -1,10 +1,10 @@
 .container {
   padding: 0 2rem;
-  max-height: 100vh;
+  height: 100svh; /*ehhhhhh*/
 }
 
 .main {
-  min-height: 100vh;
+  min-height: 100%;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -138,6 +138,7 @@
   font-weight: 600;
   line-height: 110%;
   color: #ffffff;
+  user-select: none;
 }
 
 .button:hover {
