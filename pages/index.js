@@ -1,10 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import useSound from 'use-sound'
+//Home page for Meeting Moods
+//Created by Daniel McNamara - 2022
 
-import GruntButton from '../components/GruntButton'
-import GoatButton from '../components/GoatButton'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import useSound from 'use-sound';
+
+import GoatButton from '../components/button-goat-scream';
+import PartyButton from '../components/button-party-yay';
 
 
 export default function Home() {
@@ -27,7 +30,7 @@ export default function Home() {
 
         <div className={styles.grid}>
 
-        <GruntButton/> 
+        <PartyButton/> 
         <GoatButton/>
 
         </div>
