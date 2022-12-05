@@ -1,3 +1,6 @@
+//Library based icon from Material UI
+//www.fonts.google.com/icons?icon.style=Rounded
+
 import 'material-symbols';
 
 const Icon = (props) => {
