@@ -12,6 +12,7 @@ const Button = (props) => {
     {/* <IconMaterial icon_name={props.icon_name}/> */}
 
     <IconSVG/>
+    
 
     {props.button_text}
 
