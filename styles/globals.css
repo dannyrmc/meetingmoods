@@ -1,3 +1,15 @@
+:root {
+  --white: #ffffff;
+  --gray-100: #F3F4F6;
+  --gray-900: #111827;
+  --blue-300: #93C5FD;
+  --green-200: #A7F3D0;
+  --rose-300: #FDA4AF;
+  --yellow-200: #FDE68A;
+  --yellow-50: #FFFBEB;
+
+}
+
 html,
 body {
   padding: 0;
