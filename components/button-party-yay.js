@@ -8,14 +8,8 @@ const PartyButton = () => {
  
   const [play] = useSound(party, {
 
-    /*
-    interrupt ensures that if the sound starts again before it's
-    ended, it will truncate it. Otherwise, the sound can overlap.
-    */
-    
-    //interrupt: true,
-
-    html5: true, 
+    interrupt: false, //allows for multiple onclicks to overlap
+    html5: true, //Forces full load of sound
 
     onplay: () => {
       console.log('Party sound started!');

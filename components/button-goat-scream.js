@@ -7,15 +7,9 @@ import Button from './_button-base';
 const GoatButton = () => {
 
   const [play] = useSound(goat, {
-
-    /*
-    interrupt ensures that if the sound starts again before it's
-    ended, it will truncate it. Otherwise, the sound can overlap.
-    */
     
-    //interrupt: true,
-
-    html5: true, 
+    interrupt: false, //allows for multiple onclicks to overlap
+    html5: true, //Forces full load of sound
     
     onplay: () => {
       console.log('Goat sound started!');

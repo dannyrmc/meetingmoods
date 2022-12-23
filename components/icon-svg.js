@@ -7,7 +7,7 @@ const Icon = () => {
   return ( 
     
     <div className={styles.icon}>
-      <IconSVG fill='#ffffff' />
+      <IconSVG fill='#F9FAFB'/>
     </div>
 
    );
