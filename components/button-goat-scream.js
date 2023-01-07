@@ -8,7 +8,7 @@ const GoatButton = () => {
 
   const [play] = useSound(goat, {
     
-    interrupt: false, //allows for multiple onclicks to overlap
+    interrupt: false, //Allows for multiple onclicks to overlap
     html5: true, //Forces full load of sound
     
     onplay: () => {
