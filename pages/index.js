@@ -25,7 +25,7 @@ export default function Home() {
       <main className={styles.main}>
 
         <h1 className={styles.title}>
-        <span className={styles.green_highlight}>Cheer</span> & <span className={styles.yellow_highlight}>Delight</span><br/>for your next meeting
+        <span className='bg-emerald-200'>Cheer</span> & <span className='bg-amber-200'>Delight</span><br/>for your next meeting
         </h1>
 
         <div className={styles.grid}>
