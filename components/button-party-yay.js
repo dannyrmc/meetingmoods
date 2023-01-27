@@ -26,8 +26,10 @@ const PartyButton = () => {
 
   return <Button 
     button_action= {handleClick}
-    //icon_name= "volume_up" 
     button_text= "Party Yay"
+    button_background_color = "bg-blue-200"
+    emoji_name= "party"
+    emoji_background_color = "bg-emerald-200"
   />
 };
 

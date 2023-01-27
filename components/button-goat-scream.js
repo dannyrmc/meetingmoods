@@ -26,8 +26,11 @@ const GoatButton = () => {
   
   return <Button 
     button_action= {handleClick}
-    //icon_name= "volume_up" 
     button_text= "Goat Scream"
+    button_background_color = "bg-amber-200"
+    emoji_name= "goat"
+    emoji_background_color = "bg-rose-200"
+
   />
 };
 

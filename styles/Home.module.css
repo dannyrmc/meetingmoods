@@ -139,31 +139,29 @@
 .button {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  width: 228px;
-  padding: 20px;
-  gap: 10px;
-  background: #111827;
-  border-radius: 8px;
-  border: none;
+  justify-content: left;
+  width: 332px;
+  height: 86px;
+  padding: 8px 20px 8px 8px;
+  gap: 16px;
+  border: 3px solid #111827;
+  box-shadow: 8px 8px 0px #111827;
   cursor: pointer;
-
+  align-self: stretch;
 }
 
 .button_text {
-  font-size: 18px;
+  font-size: 22px;
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
-  color: #ffffff;
+  color: #111827;
   user-select: none;
   -webkit-font-smoothing: antialiased;
-}
-
-.button:hover {
-  background-color: #176ad8; 
+  flex-grow: 1;
+  text-align: left
 }
 
 .button:active {

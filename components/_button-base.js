@@ -6,17 +6,14 @@ import IconSVG from './icon-svg';
 
 const Button = (props) => {
 
-  /*
-  document.addEventListener("touchstart", function() {},false);
-  //Does not work
-  */
-
  return (
   <button className= {`${styles.button} ${styles.button_text}`} onClick= {props.button_action}>
     
     {/* <IconMaterial icon_name={props.icon_name}/> */}
 
     <IconSVG/>
+    
+
     {props.button_text}
 
   </button>
