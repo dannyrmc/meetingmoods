@@ -30,6 +30,7 @@ const PartyButton = () => {
     button_background_color = "bg-blue-200"
     emoji_name= "party"
     emoji_background_color = "bg-emerald-200"
+    emoji_padding= "p-4"
   />
 };
 

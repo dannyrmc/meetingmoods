@@ -30,6 +30,7 @@ const GoatButton = () => {
     button_background_color = "bg-amber-200"
     emoji_name= "goat"
     emoji_background_color = "bg-rose-200"
+    emoji_padding= "p-[10px]"
 
   />
 };
