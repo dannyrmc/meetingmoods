@@ -15,7 +15,10 @@ const Button = (props) => {
  return (
   <button className= {`${styles.button} ${props.button_background_color}`} onClick= {props.button_action}>
     
-    <Emoji className = {`${props.emoji_background_color} ${props.emoji_padding} flex flex-row items-center justify-center p-[12px] w-16 h-16 border-[3px] border-gray-900`} emoji_name = {props.emoji_name}/>
+    <Emoji 
+    className = {`${props.emoji_background_color} ${props.emoji_padding} flex flex-row items-center justify-center p-[12px] w-16 h-16 border-[3px] border-gray-900`}
+    emoji_name = {props.emoji_name}
+    />
 
     <span className={styles.button_text}>
     {props.button_text}
