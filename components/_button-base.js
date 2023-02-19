@@ -3,7 +3,6 @@
 import styles from '../styles/Home.module.css';
 import IconSVG from './icon-svg';
 import Emoji from './emoji.js';
-import GoatEmoji from '../public/icons/emoji-goat.svg'
 
 const Button = (props) => {
 

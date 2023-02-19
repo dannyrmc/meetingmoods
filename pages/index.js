@@ -16,6 +16,7 @@ export default function Home() {
       
       <Head>
       <title>Meeting Moods</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport"/>
       <meta name="description" content="Bring cheer and delight to your next meeting." />
       <link rel="icon" href="/favicon.png"/>
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
