@@ -1,41 +1,41 @@
 //Home page for Meeting Moods
 //Created by Daniel McNamara | 2023
 
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import useSound from 'use-sound';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
-import GoatButton from '../components/button-goat-scream';
-import PartyButton from '../components/button-party-yay';
-
+import GoatButton from "../components/button-goat-scream";
+import PartyButton from "../components/button-party-yay";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      
       <Head>
-      <title>Meeting Moods</title>
-      <meta content="width=device-width, initial-scale=1" name="viewport"/>
-      <meta name="description" content="Bring cheer and delight to your next meeting." />
-      <link rel="icon" href="/favicon.png"/>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <title>Meeting Moods</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta
+          name="description"
+          content="Bring cheer and delight to your next meeting."
+        />
+        <link rel="icon" href="/favicon.png" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
       </Head>
 
-
       <main className={styles.main}>
-
         <h1 className={styles.title}>
-        <span className='bg-emerald-200'>Cheer</span> & <span className='bg-amber-200'>Delight</span><br/>for your next meeting
+          <span className="bg-emerald-200">Cheer</span> &{" "}
+          <span className="bg-amber-200">Delight</span>
+          <br />
+          for your next meeting
         </h1>
 
         <div className={styles.grid}>
-
-        <PartyButton/> 
-        <GoatButton/>
-
+          <PartyButton />
+          <GoatButton />
         </div>
-
       </main>
 
       {/* <footer className={styles.footer}>
@@ -51,5 +51,5 @@ export default function Home() {
         </a>
       </footer> */}
     </div>
-  )
+  );
 }

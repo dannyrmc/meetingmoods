@@ -1,8 +1,8 @@
-@import url('typography.css');
+@import url("typography.css");
 
 .container {
   padding: 0 2rem;
-  height: 100dvh; /*ehhhhhh*/
+  height: 100svh; /*ehhhhhh*/
   /* background: var(--yellow-50); */
 }
 
@@ -155,7 +155,7 @@
 
 .button_text {
   font-size: 22px;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
@@ -163,7 +163,7 @@
   user-select: none;
   -webkit-font-smoothing: antialiased;
   flex-grow: 1;
-  text-align: left
+  text-align: left;
 }
 
 .button:active {
@@ -186,8 +186,8 @@
 
 .icon {
   width: 24px;
-	height: 24px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: inline-block;
+  height: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
