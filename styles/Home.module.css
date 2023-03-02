@@ -2,8 +2,8 @@
 
 .main {
   padding: 0 2rem;
-  height: 100svh;
   height: 100vh; /*Fallback if browser doesn't support svh*/
+  height: 100svh;
 }
 
 .container {
