@@ -1,28 +1,20 @@
 //Button when clicked will play a party yay sound
 
-import useSound from 'use-sound';
-import party from '../public/audio/party-yay.mp3';
-import Button from './_button-base';
+import useSound from "use-sound";
+import party from "../public/audio/party-yay.mp3";
+import Button from "./_button-base";
 
 const PartyButton = () => {
- 
   const [play] = useSound(party, {
-
-    /*
-    interrupt ensures that if the sound starts again before it's
-    ended, it will truncate it. Otherwise, the sound can overlap.
-    */
-    
-    //interrupt: true,
-
-    html5: true, 
+    interrupt: false, //Allows for multiple onclicks to overlap
+    html5: true, //Forces full load of sound
 
     onplay: () => {
-      console.log('Party sound started!');
+      console.log("Party sound started!");
     },
 
     onend: () => {
-      console.log('Party sound ended!');
+      console.log("Party sound ended!");
     },
   });
 
@@ -30,11 +22,16 @@ const PartyButton = () => {
     play();
   };
 
-  return <Button 
-    button_action= {handleClick}
-    //icon_name= "volume_up" 
-    button_text= "Party Yay"
-  />
+  return (
+    <Button
+      button_action={handleClick}
+      button_text="Party Yay"
+      button_background_color="bg-blue-200"
+      emoji_name="party"
+      emoji_background_color="bg-emerald-200"
+      emoji_padding="p-3"
+    />
+  );
 };
 
 export default PartyButton;
