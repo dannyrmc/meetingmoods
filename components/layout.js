@@ -7,15 +7,13 @@ export default function Layout({ children }) {
       <Head>
         <title>Meeting Moods</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta property="og:title" content="Meeting Moods" />
         <meta
           name="description"
           content="Bring cheer and delight to your next meeting."
         />
+        <meta property="og:image" content="../public/images/og-image.png" />
         <link rel="icon" href="/favicon.png" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
       </Head>
       <main className={styles.main}>{children}</main>
     </>
