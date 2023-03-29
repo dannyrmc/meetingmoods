@@ -12,7 +12,7 @@ export default function Layout({ children }) {
           name="description"
           content="Bring cheer and delight to your next meeting."
         />
-        <meta property="og:image" content="../public/images/og-image.png" />
+        <meta property="og:image" content="https://photos.app.goo.gl/NFBk93fdL2bQT4G39" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={styles.main}>{children}</main>
