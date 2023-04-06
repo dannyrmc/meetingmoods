@@ -8,6 +8,8 @@ export default function Layout({ children }) {
         {/* Primary Meta Tags */}
         <title>Meeting Moods</title>
         <link rel="icon" href="/favicon.png" />
+        <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48" href="/favicon.ico"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png"></link>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
