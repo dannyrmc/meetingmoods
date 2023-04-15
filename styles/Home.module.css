@@ -113,7 +113,7 @@
 
 .button:active {
   transform: translateY(4px);
-  -webkit-transition: all 0.09s cubic-bezier(0.45, 1.45, 0.8, 1);
+  -webkit-transition: all 0.8s cubic-bezier(0.45, 1.45, 0.8, 1);
   transition: all 0.09s cubic-bezier(0.45, 1.45, 0.8, 1);
 }
 
