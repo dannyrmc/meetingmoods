@@ -22,7 +22,7 @@ const Button = (props) => {
 
       <span className={styles.button_text}>{props.button_text}</span>
       <IconSVG />
-      <script>document.addEventListener("touchstart", function() {}, true);</script>
+      <script type='application/javascript'>document.addEventListener("touchstart", function() {}, true);</script>
     </button>
   );
 };
