@@ -20,7 +20,7 @@ const Button = (props) => {
         emoji_name={props.emoji_name}
       />
 
-      <span className='font-sans text-gray-900 text-[22px] leading-[110%] select-none grow text-left antialiased'>{props.button_text}</span>
+      <span className='font-sans font-bold text-gray-900 text-[22px] leading-[110%] select-none grow text-left antialiased'>{props.button_text}</span>
       <IconSVG />
     </button>
   );
