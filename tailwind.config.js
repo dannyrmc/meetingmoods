@@ -7,7 +7,7 @@ module.exports = {
   theme: {
 
     fontFamily: {
-      'sans': ["Gilroy", 'Arial', 'sans-serif'],
+      'sans': ["Gilroy", 'Arial', 'Helvetica', 'sans-serif'],
     },
 
     extend: {},
