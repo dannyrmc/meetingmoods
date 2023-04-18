@@ -12,7 +12,7 @@ const Button = (props) => {
 
   return (
     <button
-      className={`${props.button_background_color} flex flex-row items-center self-stretch w-[332px] h-[86px] gap-4 border-gray-900 border-[3px] border-solid pl-2 pr-5 py-2 shadow-[8px_8px_0px] shadow-gray-900 cursor-pointer active:translate-y-1 active:translate-x-1 active:shadow-[0px_0px_0px] transition-all duration-[0.2s] ease-[cubic-bezier(0.45,1.45,0.8,1)]`}
+      className={`${props.button_background_color} flex flex-row items-center self-stretch w-[332px] h-[86px] gap-4 border-gray-900 border-[3px] border-solid pl-2 pr-5 py-2 shadow-[8px_8px_0px] shadow-gray-900 cursor-pointer active:translate-y-1 active:translate-x-1 active:shadow-[0px_0px_0px] transition-all duration-[0.5s] ease-[cubic-bezier(0.45,1.45,0.8,1)]`}
       onClick={props.button_action}
     >
       <Emoji
