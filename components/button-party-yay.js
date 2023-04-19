@@ -4,7 +4,6 @@ import party from "../public/audio/party-yay.mp3";
 import Button from "./_button-base";
 
 const PartyButton = () => {
-
   return (
     <Button
       button_text="Party Yay"

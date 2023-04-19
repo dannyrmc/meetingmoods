@@ -8,7 +8,9 @@ import PartyButton from "../components/button-party-yay";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1 className={`font-sans font-bold	text-gray-900 text-[32px] leading-[110%] tracking-[-0.01em] text-center select-none antialiased`}>
+      <h1
+        className={`font-sans font-bold	text-gray-900 text-[32px] leading-[110%] tracking-[-0.01em] text-center select-none antialiased`}
+      >
         <span className="bg-emerald-200">Cheer</span>
         {" & "}
         <span className="bg-amber-200">Delight</span>

@@ -4,7 +4,6 @@ import goat from "../public/audio/goat-scream.mp3";
 import Button from "./_button-base";
 
 const GoatButton = () => {
-
   return (
     <Button
       button_text="Goat Scream"
