@@ -1,7 +1,6 @@
 @import url("typography.css");
 
 .main {
-  padding: 0 2rem;
   height: 100vh; /*Fallback if browser doesn't support svh*/
   height: 100svh;
 }
@@ -32,42 +31,11 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  color: var(--gray-900);
-  font-family: Gilroy, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 110%;
-  letter-spacing: -0.01em;
-  text-align: center;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
 
 .grid {
   display: flex;
   align-items: center;
+  align-content: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 32px;
@@ -83,56 +51,9 @@
   }
 }
 
-.button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-  width: 332px;
-  height: 86px;
-  padding: 8px 20px 8px 8px;
-  gap: 16px;
-  border: 3px solid #111827;
-  box-shadow: 8px 8px 0px #111827;
-  cursor: pointer;
-  align-self: stretch;
-}
-
-.button_text {
-  font-size: 22px;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-  color: #111827;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-  flex-grow: 1;
-  text-align: left;
-}
-
 .button:active {
   transform: translateY(4px);
   -webkit-transition: all 0.09s cubic-bezier(0.45, 1.45, 0.8, 1);
+  -webkit-transition: -webkit-transform 900ms;
   transition: all 0.09s cubic-bezier(0.45, 1.45, 0.8, 1);
-}
-
-.icon_container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 36px;
-  background: var(--gray-900);
-  border-radius: 24px;
-  display: inline-block;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: inline-block;
 }
