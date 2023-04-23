@@ -8,6 +8,7 @@ module.exports = {
 
     fontFamily: {
       'sans': ["var(--font-gilroy-bold)", "var(--font-inter)"],
+      'inter': ["var(--font-inter)"]
     },
 
     extend: {
