@@ -7,8 +7,8 @@ module.exports = {
   theme: {
 
     fontFamily: {
-      'sans': ["var(--font-gilroy-bold)", "var(--font-inter)"],
-      'inter': ["var(--font-inter)"]
+      'sans': ["var(--font-gilroy-bold)", "var(--font-poppins)"],
+      'poppins': ["var(--font-poppins)"]
     },
 
     extend: {
