@@ -8,28 +8,34 @@ What started as a fun joke with my team at work eventually developed into a full
 Make sure you have `node` and `npm` installed globally on your machine.
 
 [View Node.js →](https://nodejs.org/en/download)
+
 [View npm →](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 
 ## Setup
 
-**1. Installation**
+Installation:
+
 `npm install`
 
-**2. Start Server**
+Start Server:
+
 `npm run dev`
 
-**3. View Running Application**
+View Running Application:
+
 http://localhost:3000
 
 
 ## Libraries Used
+Howler.js
+[View Howler.js →](https://howlerjs.com/)
 
-[**Howler.js**](https://howlerjs.com/)
-[**use-sound**](https://github.com/joshwcomeau/use-sound) 
+use-sound
+[View use-sound →](https://github.com/joshwcomeau/use-sound) 
 
 
 ## Acknowledgments
 Big shout out to @joshwcomeau for his library [use-sound](https://github.com/joshwcomeau/use-sound) that makes this application work.
 
-I do not own the rights to the audio used in this application. This application is purely for fun and educational purposes. 
+I do not own the rights to the audio used in this application. This application is purely for fun and educational purposes.
