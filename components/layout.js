@@ -1,7 +1,7 @@
 import HeadData from "./head-data";
 import styles from "../styles/Home.module.css";
 import localFont from "next/font/local";
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 const gilroy = localFont({
   src: "../public/fonts/Gilroy-Bold.woff2",
@@ -10,9 +10,10 @@ const gilroy = localFont({
   display: "swap",
 });
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-poppins',
+  weight: "700",
   display: 'swap'
 });
 
@@ -22,7 +23,7 @@ export default function Layout({ children }) {
   return (
     <>
       <HeadData />
-      <main className={`${styles.main} ${gilroy.variable} ${inter.variable}`}>{children}</main>
+      <main className={`${styles.main} ${gilroy.variable} ${poppins.variable}`}>{children}</main>
     </>
   );
 }
