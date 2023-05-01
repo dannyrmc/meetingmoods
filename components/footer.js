@@ -7,7 +7,7 @@ const github = "https://github.com/dannyrmc/meetingmoods"
 const Footer = () => {
   return ( 
 
-    <footer className="w-full h-16 py-3 text-slate-50 bg-gray-950 flex justify-center items-center">
+    <footer className="w-full h-16 py-3 text-slate-50 bg-gray-900 flex justify-center items-center">
 
       <div className="flex flex-row justify-between items-center w-full px-2 md:px-12 lg:px-24 xl:px-32">
 
