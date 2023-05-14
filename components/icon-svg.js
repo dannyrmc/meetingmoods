@@ -4,8 +4,8 @@ import IconVolume from "../public/icons/icon-sharp-filled-volume_up.svg";
 
 const Icon = () => {
   return (
-    <div className="flex flex-row justify-center items-center w-10 h-10 bg-gray-900 rounded-3xl">
-      <IconVolume className="fill-gray-50 w-6 h-6 bg-cover bg-no-repeat inline-block" />
+    <div className="flex h-10 w-10 flex-row items-center justify-center rounded-3xl bg-gray-950">
+      <IconVolume className="inline-block h-6 w-6 bg-cover bg-no-repeat fill-gray-50" />
     </div>
   );
 };

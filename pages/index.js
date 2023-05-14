@@ -8,10 +8,10 @@ import Footer from "../components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-full flex flex-auto flex-col">
-      <div className="min-h-full flex flex-col flex-1 justify-center items-center mx-4">
+    <div className="flex min-h-full flex-auto flex-col">
+      <div className="mx-4 flex min-h-full flex-1 flex-col items-center justify-center">
         <h1
-          className={`font-sans font-bold	text-gray-950 text-[32px] leading-[110%] tracking-[-0.01em] text-center select-none antialiased`}
+          className={`select-none text-center	font-sans text-[32px] font-bold leading-[110%] tracking-[-0.01em] text-gray-950 antialiased`}
         >
           <span className="bg-emerald-200">Cheer</span>
           {" & "}
@@ -19,13 +19,12 @@ export default function Home() {
           <br />
           for your next meeting
         </h1>
-
         <div className={styles.grid}>
           <PartyButton />
           <GoatButton />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -12,7 +12,7 @@ const GoatButton = () => {
       sound_file={goat}
       sound_name="Goat"
       emoji_background_color="bg-rose-200"
-      emoji_padding="p-[10px]"
+      emoji_padding="p-3"
     />
   );
 };
