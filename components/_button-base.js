@@ -29,7 +29,7 @@ const Button = (props) => {
 
   return (
     <button
-      className={`${props.button_background_color} flex h-[86px] w-full sm:w-[330px] cursor-pointer flex-row items-center gap-4 self-stretch border-[3px] border-solid border-gray-950 py-2 pl-2 pr-5 shadow-[8px_8px_0px] shadow-grborder-gray-950 transition-all duration-[0.2s] ease-[cubic-bezier(0.45,1.45,0.8,1)] active:translate-x-1 active:translate-y-1 active:shadow-[0px_0px_0px]`}
+      className={`${props.button_background_color} flex h-[86px] w-full cursor-pointer flex-row items-center gap-4 self-stretch border-[3px] border-solid border-gray-950 py-2 pl-2 pr-5 shadow-[8px_8px_0px] transition-all duration-[0.2s] ease-[cubic-bezier(0.45,1.45,0.8,1)] active:translate-x-1 active:translate-y-1 active:shadow-[0px_0px_0px] sm:w-[330px]`}
       onClick={handleClick}
     >
       <Emoji
@@ -37,7 +37,7 @@ const Button = (props) => {
         emoji_name={props.emoji_name}
       />
 
-      <span className="grow select-none text-left font-sans text-[22px] font-bold leading-[110%] text-grborder-gray-950 antialiased">
+      <span className="grow select-none text-left font-sans text-[22px] font-bold leading-[110%] text-gray-950 antialiased">
         {props.button_text}
       </span>
       <IconSVG />
