@@ -6,7 +6,7 @@ const github = "https://github.com/dannyrmc/meetingmoods";
 
 const Footer = () => {
   return (
-    <footer className="flex h-16 w-full items-center justify-center bg-gray-950 py-3 text-slate-50">
+    <footer className="sticky bottom-0 flex w-full items-center justify-center bg-gray-950 py-3 text-slate-50">
       <div className="flex w-full flex-row items-center justify-between px-2 md:px-12 lg:px-24 xl:px-32">
         <Logo_md className="inline-block h-12 w-[120px] bg-cover bg-no-repeat fill-gray-50" />
 
@@ -14,6 +14,8 @@ const Footer = () => {
           <Link
             className="mr-4 grow cursor-pointer select-none text-left font-sans text-sm font-bold leading-[120%] text-gray-50 antialiased"
             href={github}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Made by Danny Mc →
           </Link>
