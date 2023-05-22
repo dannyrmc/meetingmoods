@@ -4,37 +4,27 @@
 import styles from "../styles/Home.module.css";
 import GoatButton from "../components/button-goat-scream";
 import PartyButton from "../components/button-party-yay";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1
-        className={`font-sans font-bold	text-gray-900 text-[32px] leading-[110%] tracking-[-0.01em] text-center select-none antialiased`}
-      >
-        <span className="bg-emerald-200">Cheer</span>
-        {" & "}
-        <span className="bg-amber-200">Delight</span>
-        <br />
-        for your next meeting
-      </h1>
-
-      <div className={styles.grid}>
-        <PartyButton />
-        <GoatButton />
-      </div>
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="flex min-h-full flex-auto flex-col">
+      <div className="mx-4 flex min-h-full flex-1 flex-col items-center justify-center gap-10 sm:gap-8 sm:mt-[-32px]">
+        <h1
+          className={`select-none text-center	font-sans text-[32px] font-bold leading-[110%] tracking-[-0.01em] text-gray-950 antialiased`}
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
+          <span className="bg-emerald-200">Cheer</span>
+          {" & "}
+          <span className="bg-amber-200">Delight</span>
+          <br />
+          for your next meeting
+        </h1>
+        <div className={styles.grid}>
+          <PartyButton />
+          <GoatButton />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,9 @@
 module.exports = {
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
+  
   webpack(config, options) {
     const { isServer } = options;
     config.module.rules.push({

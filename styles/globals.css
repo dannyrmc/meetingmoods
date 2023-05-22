@@ -19,9 +19,12 @@ body {
   margin: 0;
   /* overflow: hidden; */
   background: var(--yellow-50);
-  background-image: radial-gradient(circle at 1px 1px, rgba(17, 24, 39, 0.16) 1px, transparent 0);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(17, 24, 39, 0.16) 1px,
+    transparent 0
+  );
   background-size: 16px 16px;
-
 }
 
 a {
