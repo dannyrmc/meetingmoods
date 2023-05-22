@@ -46,6 +46,7 @@
 @media (max-width: 600px) {
   .grid {
     width: 100%;
+    gap: 28px;
     flex-direction: column;
   }
 }
