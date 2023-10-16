@@ -1,5 +1,7 @@
 //Base component for buttons
 
+"use client";
+
 import IconSVG from "./icon-svg";
 import Emoji from "./emoji.js";
 import useSound from "use-sound";

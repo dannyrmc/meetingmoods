@@ -1,7 +1,8 @@
 // Base emoji component
 
-import EmojiGoat from "../public/icons/emoji-goat.svg";
-import EmojiParty from "../public/icons/emoji-party.svg";
+//probably should colocate the icons in the app directory
+import EmojiGoat from "@/icons/emoji-goat.svg";
+import EmojiParty from "@/icons/emoji-party.svg";
 
 const emojis = {
   goat: EmojiGoat,
