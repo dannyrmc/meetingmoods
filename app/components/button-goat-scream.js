@@ -1,6 +1,8 @@
 //Button when clicked will play a screaming goat sound
 
-import goat from "../public/audio/goat-scream.mp3";
+"use client"
+
+import goat from "@/audio/goat-scream.mp3";
 import Button from "./_button-base";
 
 const GoatButton = () => {
