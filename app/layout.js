@@ -2,7 +2,6 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import { siteConfig } from "../config/site";
-// import { Analytics } from "@vercel/analytics/react";
 import { Analytics } from "config/analytics";
 
 const gilroy = localFont({
@@ -55,14 +54,15 @@ export const metadata = {
   },
   icons: {
     icon: "/favicon.ico",
+    icon: "/favicon_192x192.png",
+    icon: "/favicon_512x512.png",
     apple: "/favicon_180x180.png",
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${gilroy.variable} ${poppins.variable}`}>
         {children}
         <Analytics />
@@ -70,12 +70,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-//To Do:
-//[✅] Clean up css files and transition to tailwind css
-//[✅] Finish setting up layout.js with new tailwind css method
-//[✅] Move everything to the App Router
-//[ ] Delete old files
-//[ ] Update to sticky footer
-//[ ] Test in dev
-//[ ] Publish to Main

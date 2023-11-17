@@ -1,9 +1,9 @@
 //Button when clicked will play a party yay sound
 
-"use client"
+"use client";
 
 import party from "@/audio/party-yay.mp3";
-import Button from "./_button-base";
+import Button from "./button-base";
 
 const PartyButton = () => {
   return (
