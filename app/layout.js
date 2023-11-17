@@ -54,9 +54,10 @@ export const metadata = {
   },
   icons: {
     icon: "/favicon.ico",
+    icon: "/favicon_192x192.png",
+    icon: "/favicon_512x512.png",
     apple: "/favicon_180x180.png",
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
 export default function RootLayout({ children }) {
