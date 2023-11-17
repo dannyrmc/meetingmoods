@@ -4,12 +4,11 @@
 import GoatButton from "./components/button-goat-scream";
 import PartyButton from "./components/button-party-yay";
 import Footer from "./components/footer";
-import { siteConfig } from "../config/site";
 
 export default function Home() {
   return (
     <main className="flex min-h-full flex-auto flex-col">
-      <div className="mx-4 flex min-h-full flex-1 flex-col items-center justify-center gap-10 sm:mt-[-32px] sm:gap-8">
+      <div className="mx-4 mb-16 flex flex-1 flex-col items-center justify-center gap-10 sm:mt-[-32px] sm:gap-8 md:mb-[72px]">
         <h1
           className={`select-none text-center	font-sans text-[32px] font-bold leading-[110%] tracking-[-0.01em] text-gray-950 antialiased`}
         >

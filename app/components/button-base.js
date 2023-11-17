@@ -6,22 +6,26 @@ import IconSVG from "./icon-svg";
 import Emoji from "./emoji.js";
 import useSound from "use-sound";
 
+// Converts any string into sentence case. Overkill? Maybe...
+function toSentenceCase(str) {
+  return str.replace(/^(.)(.*)$/, (match, firstLetter, restOfString) => {
+    return `${firstLetter.toUpperCase()}${restOfString.toLowerCase()}`;
+  });
+}
+
 const Button = (props) => {
-  /*
-  document.addEventListener("touchstart", function() {},false);
-  //Does not work
-  */
+  const soundName = toSentenceCase(props.sound_name);
 
   const [play] = useSound(props.sound_file, {
     interrupt: false, //Allows for multiple onclicks to overlap
     html5: true, //Forces full load of sound
 
     onplay: () => {
-      console.log(`${props.sound_name} sound started!`);
+      console.log(`${soundName} sound started!`);
     },
 
     onend: () => {
-      console.log(`${props.sound_name} sound ended!`);
+      console.log(`${soundName} sound ended!`);
     },
   });
 

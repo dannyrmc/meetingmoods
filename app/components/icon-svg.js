@@ -1,6 +1,6 @@
 //SVG based icon commponent
 
-import IconVolume from "@/icons/icon-sharp-filled-volume_up.svg";
+import IconVolume from "@/icons/icon-sharp-filled-volume-up.svg";
 
 const Icon = () => {
   return (
