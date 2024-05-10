@@ -1,5 +1,7 @@
 # Meeting Moods
 
+![Cover image of the Meeting Moods homepage](/public/readme-cover.png)
+
 A full-stack web application to help bring cheer and delight to boring meetings built with Next.js, JavaScript, and Tailwind CSS.
 
 What started as a fun joke with my team at work eventually developed into a full-stack side project a year later. Enjoy!
