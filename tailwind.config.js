@@ -5,6 +5,12 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'bg-amber-200',
+    'bg-emerald-200',
+    'bg-rose-200',
+    'bg-blue-200',
+  ],
   theme: {
     fontFamily: {
       sans: ["var(--font-gilroy-bold)", "var(--font-poppins)"],
@@ -29,5 +35,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: [],
 };

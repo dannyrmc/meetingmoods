@@ -2,7 +2,8 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import { siteConfig } from "../config/site";
-import { Analytics } from "config/analytics";
+import { Analytics } from "@vercel/analytics/react";
+import Footer from "./components/footer";
 
 const gilroy = localFont({
   src: "../public/fonts/Gilroy-Bold.woff2",
@@ -19,38 +20,38 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
-  keywords: ["Meeting", "Standup", "Team Culture", "Brainstorm", "Fun"],
+  title: siteConfig.project.name,
+  description: siteConfig.project.description,
+  keywords: siteConfig.project.keywords,
   authors: [
     {
-      name: "Danny Mc",
-      url: "https://dannymc.dev",
+      name: siteConfig.creator.name,
+      url: siteConfig.creator.portfolio,
     },
   ],
-  creator: "Danny Mc",
+  creator: siteConfig.creator.name,
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    url: siteConfig.project.url,
+    title: siteConfig.project.name,
+    description: siteConfig.project.description,
+    siteName: siteConfig.project.name,
     images: [
       {
-        url: siteConfig.ogImage,
+        url: siteConfig.project.ogImage,
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: siteConfig.project.name,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [siteConfig.ogImage],
-    creator: "@dannyismc",
+    title: siteConfig.project.name,
+    description: siteConfig.project.description,
+    images: [siteConfig.project.ogImage],
+    creator: `@${siteConfig.creator.username}`,
   },
   icons: {
     icon: "/favicon.ico",
@@ -62,9 +63,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${gilroy.variable} ${poppins.variable}`}>
+    <html lang="en" className="bg-amber-50" suppressHydrationWarning>
+      <body
+        className={`${gilroy.variable} ${poppins.variable} h-svh antialiased`}
+      >
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

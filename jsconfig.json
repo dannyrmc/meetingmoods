@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
+      "@/*": ["./*"],
+      "@/components/*": ["app/components/*"],
       "@/audio/*": ["public/audio/*"],
       "@/icons/*": ["public/icons/*"]
     }

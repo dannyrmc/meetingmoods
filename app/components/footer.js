@@ -12,7 +12,7 @@ const Footer = () => {
 
         <div className="flex flex-row">
           <Link
-            className="mr-4 grow cursor-pointer select-none text-left font-sans text-sm font-bold leading-[120%] text-gray-50 antialiased"
+            className="mr-4 grow cursor-pointer select-none text-left font-sans text-sm font-bold leading-[120%] text-gray-50"
             href={siteConfig.links.github}
             target="_blank"
             rel="noopener noreferrer"
