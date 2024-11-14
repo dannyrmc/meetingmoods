@@ -1,4 +1,4 @@
-//SVG based icon commponent
+// SVG based icon commponent
 
 import IconVolume from "@/icons/icon-sharp-filled-volume-up.svg";
 

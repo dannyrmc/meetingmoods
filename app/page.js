@@ -1,29 +1,22 @@
 //Homepage for Meeting Moods
 //Created by Daniel McNamara | 2023
 
-import GoatButton from "./components/button-goat-scream";
-import PartyButton from "./components/button-party-yay";
-import Footer from "./components/footer";
+import Buttons from "@/app/components/buttons";
 
 export default function Home() {
   return (
     <main className="flex min-h-full flex-auto flex-col">
-      <div className="mx-4 mb-16 flex flex-1 flex-col items-center justify-center gap-10 sm:mt-[-32px] sm:gap-8 md:mb-[72px]">
-        <h1
-          className={`select-none text-center	font-sans text-[32px] font-bold leading-[110%] tracking-[-0.01em] text-gray-950 antialiased`}
-        >
-          <span className="bg-emerald-200">Cheer</span>
-          {" & "}
-          <span className="bg-amber-200">Delight</span>
-          <br />
-          for your next meeting
-        </h1>
-        <div className="mr-1 box-content flex w-full flex-col flex-wrap items-center justify-center gap-[28px] sm:max-w-[800px] sm:flex-row sm:gap-8">
-          <PartyButton />
-          <GoatButton />
+      <div className="mx-4 mb-16 flex flex-1 flex-col items-center justify-center gap-10 sm:mx-6 sm:mt-[-32px] sm:gap-8 md:mb-[72px]">
+        <div className="flex select-none flex-col text-center	font-sans text-[32px] font-bold leading-[110%] tracking-[-0.01em] text-gray-950">
+          <h1 className="whitespace-nowrap">
+            <span className="bg-emerald-200 px-1">Cheer</span>
+            <span> & </span>
+            <span className="bg-amber-200 px-1">Delight</span>
+          </h1>
+          <h1>for your next meeting</h1>
         </div>
+        <Buttons />
       </div>
-      <Footer />
     </main>
   );
 }
