@@ -31,7 +31,7 @@ export default function getSounds() {
 
     return {
       ...button,
-      handleClick: () => play(),
+      handleSound: () => play(),
     };
   });
 

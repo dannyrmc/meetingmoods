@@ -1,4 +1,3 @@
-// import Logo_sm from "../public/logo-white-sm.svg";
 import Logo from "@/logos/logo-white.svg";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
