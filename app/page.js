@@ -1,7 +1,7 @@
 //Homepage for Meeting Moods
 //Created by Daniel McNamara | 2023
 
-import Buttons from "@/components/button";
+import Buttons from "@/app/components/buttons";
 
 export default function Home() {
   return (

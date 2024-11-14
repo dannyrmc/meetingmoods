@@ -1,4 +1,4 @@
-//Button Component 
+//Button Component
 
 "use client";
 
@@ -10,11 +10,11 @@ const Buttons = () => {
   const sounds = getSounds();
 
   return (
-    <div className="mr-1 box-content flex w-full flex-col flex-wrap items-center justify-center gap-[28px] sm:max-w-[800px] sm:flex-row sm:gap-8">
+    <div className="mr-1 box-content flex w-full max-w-[400px] flex-col flex-wrap items-center justify-center gap-[28px] sm:gap-8 md:max-w-[750px] md:flex-row">
       {sounds.map(({ id, ...props }) => (
         <button
           key={id}
-          className={`${props.button_bg_color} flex h-[86px] w-full cursor-pointer flex-row items-center gap-4 self-stretch border-[3px] border-solid border-gray-950 py-2 pl-2 pr-5 shadow-[8px_8px_0px] transition-all duration-[0.2s] ease-[cubic-bezier(0.45,1.45,0.8,1)] active:translate-x-1 active:translate-y-1 active:shadow-[0px_0px_0px] sm:w-[330px]`}
+          className={`${props.button_bg_color} flex h-[86px] w-full flex-1 cursor-pointer flex-row items-center gap-4 self-stretch border-[3px] border-solid border-gray-950 py-2 pl-2 pr-5 shadow-[8px_8px_0px] transition-all duration-[0.2s] ease-[cubic-bezier(0.45,1.45,0.8,1)] active:translate-x-1 active:translate-y-1 active:shadow-[0px_0px_0px]`}
           onClick={props.handleClick}
         >
           <div

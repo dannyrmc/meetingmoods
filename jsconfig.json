@@ -5,7 +5,8 @@
       "@/*": ["./*"],
       "@/components/*": ["app/components/*"],
       "@/audio/*": ["public/audio/*"],
-      "@/icons/*": ["public/icons/*"]
+      "@/icons/*": ["public/icons/*"],
+      "@/logos/*": ["public/logos/*"]
     }
   }
 }

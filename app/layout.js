@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import { siteConfig } from "../config/site";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "./components/footer";
+import BreakpointIndicator from "@/components/breakpoint-indicator"
 
 const gilroy = localFont({
   src: "../public/fonts/Gilroy-Bold.woff2",
@@ -63,11 +64,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-amber-50" suppressHydrationWarning>
+    <html lang="en" className="bg-amber-50 antialiased" suppressHydrationWarning>
       <body
-        className={`${gilroy.variable} ${poppins.variable} h-svh antialiased`}
+        className={`${gilroy.variable} ${poppins.variable} h-svh`}
       >
         {children}
+        <BreakpointIndicator />
         <Footer />
         <Analytics />
       </body>
