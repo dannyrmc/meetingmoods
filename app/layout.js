@@ -2,7 +2,8 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import { siteConfig } from "../config/site";
-import { Analytics } from "@vercel/analytics/react";
+// import { Analytics } from "@vercel/analytics/react";
+import { VercelAnalytics } from "@/config/analytics";
 import Footer from "./components/footer";
 import BreakpointIndicator from "@/components/breakpoint-indicator"
 
@@ -71,7 +72,8 @@ export default function RootLayout({ children }) {
         {children}
         <BreakpointIndicator />
         <Footer />
-        <Analytics />
+        <VercelAnalytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   );
