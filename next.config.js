@@ -3,6 +3,19 @@ module.exports = {
     locales: ['en'],
     defaultLocale: 'en',
   },
+
+  async rewrites() {
+    return [
+      {
+        source: "/images/:match*",
+        destination: "https://meetingmoods.app/_vercel/insights/:match*",
+      },
+      {
+        source: "/images/:match*",
+        destination: "https://beta.meetingmoods.app/_vercel/insights/:match*",
+      },
+    ];
+  },
   
   webpack(config, options) {
     const { isServer } = options;
