@@ -9,9 +9,8 @@
   },
   "dependencies": {
     "@vercel/analytics": "^0.1.6",
-    "eslint-config-next": "^16.0.6",
     "howler": "^2.2.3",
-    "next": "^14.2.29",
+    "next": "^14.2.35",
     "nextjs-redirect": "^5.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
