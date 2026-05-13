@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/components/*": ["app/components/*"],
-      "@/audio/*": ["public/audio/*"],
-      "@/icons/*": ["public/icons/*"],
-      "@/logos/*": ["public/logos/*"]
+      "@/components/*": ["./app/components/*"],
+      "@/audio/*": ["./public/audio/*"],
+      "@/icons/*": ["./public/icons/*"],
+      "@/logos/*": ["./public/logos/*"]
     }
   }
 }
