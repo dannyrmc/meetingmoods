@@ -2,7 +2,7 @@
 
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import IconSVG from "@/components/icon-svg";
 import Emoji from "@/components/emoji";
 
@@ -27,18 +27,69 @@ const sounds = [
 
 const Buttons = () => {
   const audioRefs = useRef([]);
+  const contextRef = useRef(null);
+  const buffersRef = useRef({});
   const [activeIndex, setActiveIndex] = useState(null);
 
+  // Decode each clip once into an AudioBuffer so playback is instant on click.
+  // The <audio> elements below are only loaded if Web Audio is unavailable.
+  useEffect(() => {
+    const preloadFallback = (index) => audioRefs.current[index]?.load();
+
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+
+    if (!AudioContextClass) {
+      sounds.forEach((sound, index) => preloadFallback(index));
+      return;
+    }
+
+    const context = new AudioContextClass();
+    contextRef.current = context;
+
+    let cancelled = false;
+
+    sounds.forEach(async (sound, index) => {
+      try {
+        const response = await fetch(sound.sound_file);
+        const buffer = await context.decodeAudioData(await response.arrayBuffer());
+
+        if (!cancelled) buffersRef.current[sound.id] = buffer;
+      } catch {
+        if (!cancelled) preloadFallback(index);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+      contextRef.current = null;
+      context.close();
+    };
+  }, []);
+
   const handlePlay = (index) => {
+    setActiveIndex(index);
+    setTimeout(() => setActiveIndex(null), 300);
+
+    const context = contextRef.current;
+    const buffer = buffersRef.current[sounds[index].id];
+
+    if (context && buffer) {
+      // Safe to start on a suspended context: the source plays once it resumes.
+      if (context.state === "suspended") context.resume();
+
+      const source = context.createBufferSource();
+      source.buffer = buffer;
+      source.connect(context.destination);
+      source.start();
+
+      return;
+    }
+
     const audio = audioRefs.current[index];
     if (!audio) return;
 
-    const clone = audio.cloneNode(true);
-    setActiveIndex(index);
-    clone.currentTime = 0;
-    clone.play();
-
-    setTimeout(() => setActiveIndex(null), 300);
+    audio.currentTime = 0;
+    audio.play().catch(() => {});
   };
 
   return (
@@ -68,7 +119,7 @@ const Buttons = () => {
               audioRefs.current[index] = element;
             }}
             src={sound.sound_file}
-            preload="auto"
+            preload="none"
           />
         </div>
       ))}
