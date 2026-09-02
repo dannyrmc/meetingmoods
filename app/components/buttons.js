@@ -2,7 +2,7 @@
 
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import IconSVG from "@/components/icon-svg";
 import Emoji from "@/components/emoji";
 
@@ -28,7 +28,29 @@ const sounds = [
 const Buttons = () => {
   const audioRefs = useRef([]);
   const poolRefs = useRef([]);
+  const lastPointerRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(null);
+
+  const getPool = (index) =>
+    (poolRefs.current[index] ??= [audioRefs.current[index]]);
+
+  // iOS ignores preload until the page has been touched, so the first tap would
+  // otherwise pay for the fetch and decode. Warm every clip on the first touch
+  // anywhere on the page, whenever that happens to be.
+  useEffect(() => {
+    const warm = () =>
+      sounds.forEach((_, index) =>
+        getPool(index).forEach((clip) => clip.load())
+      );
+
+    document.addEventListener("pointerdown", warm, { once: true });
+    document.addEventListener("keydown", warm, { once: true });
+
+    return () => {
+      document.removeEventListener("pointerdown", warm);
+      document.removeEventListener("keydown", warm);
+    };
+  }, []);
 
   // Playback goes through plain <audio> elements on purpose: iOS routes Web
   // Audio to the ringer channel, so it is silenced by the hardware mute switch,
@@ -42,7 +64,7 @@ const Buttons = () => {
     const audio = audioRefs.current[index];
     if (!audio) return;
 
-    const pool = (poolRefs.current[index] ??= [audio]);
+    const pool = getPool(index);
     let clip = pool.find((item) => item.paused || item.ended);
 
     if (!clip) {
@@ -55,6 +77,26 @@ const Buttons = () => {
     if (clip.currentTime) clip.currentTime = 0;
 
     clip.play().catch(() => {});
+
+    // Keep one loaded spare behind the clips in flight, so the next tap never
+    // waits on a cold clone.
+    if (!pool.some((item) => item !== clip && (item.paused || item.ended))) {
+      const spare = audio.cloneNode(true);
+      spare.load();
+      pool.push(spare);
+    }
+  };
+
+  // Fire on finger-down rather than waiting for the click that follows the
+  // release; the click handler stays for keyboard activation.
+  const handlePointerDown = (index) => {
+    lastPointerRef.current = Date.now();
+    handlePlay(index);
+  };
+
+  const handleClick = (index) => {
+    if (Date.now() - lastPointerRef.current < 700) return;
+    handlePlay(index);
   };
 
   return (
@@ -67,7 +109,8 @@ const Buttons = () => {
             } flex h-[86px] w-full flex-1 cursor-pointer flex-row items-center gap-4 self-stretch border-3 border-solid border-gray-950 py-2 pl-2 pr-5 shadow-custom ${
               activeIndex === index ? "animate-moving" : ""
             }`}
-            onClick={() => handlePlay(index)}
+            onPointerDown={() => handlePointerDown(index)}
+            onClick={() => handleClick(index)}
           >
             <div
               className={`${sound.emoji_bg_color} flex size-16 flex-row items-center justify-center border-[3px] border-gray-950`}
