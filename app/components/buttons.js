@@ -36,11 +36,16 @@ const Buttons = () => {
 
   // iOS ignores preload until the page has been touched, so the first tap would
   // otherwise pay for the fetch and decode. Warm every clip on the first touch
-  // anywhere on the page, whenever that happens to be.
+  // anywhere on the page, whenever that happens to be. load() resets an element
+  // and aborts whatever it was doing, so only ever call it on a clip that is
+  // both idle and still empty - the first touch may be the button itself, which
+  // has already started playing by the time this runs.
   useEffect(() => {
     const warm = () =>
       sounds.forEach((_, index) =>
-        getPool(index).forEach((clip) => clip.load())
+        getPool(index).forEach((clip) => {
+          if (clip.paused && clip.readyState === 0) clip.load();
+        })
       );
 
     document.addEventListener("pointerdown", warm, { once: true });
